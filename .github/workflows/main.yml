@@ -17,11 +17,8 @@ jobs:
           curl -LJO https://github.com/ytdl-org/youtube-dl/releases/latest/download/youtube-dl
           chmod +x ./youtube-dl
           sudo ./youtube-dl --config-location youtube-dl.conf
-      - name: Get public IP
-        run: dig +short myip.opendns.com @resolver1.opendns.com
-      - name: Host server
-        run: |
-          cd downloads
-          sudo ufw allow 8000
-          timeout 5m python -m http.server 8000
-
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: downloads
+          path: downloads
