@@ -12,11 +12,15 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8.x'
-      - name: Install and run YouTube-DL
+      # - name: Install and run YouTube-DL
+      #   run: |
+      #     curl -LJO https://github.com/ytdl-org/youtube-dl/releases/latest/download/youtube-dl
+      #     chmod +x ./youtube-dl
+      #     sudo ./youtube-dl --config-location youtube-dl.conf
+      - name: Download 10GB file
         run: |
-          curl -LJO https://github.com/ytdl-org/youtube-dl/releases/latest/download/youtube-dl
-          chmod +x ./youtube-dl
-          sudo ./youtube-dl --config-location youtube-dl.conf
+          mkdir downloads
+          wget -q -O downloads/10GB.zip http://speedtest.tele2.net/10GB.zip
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
