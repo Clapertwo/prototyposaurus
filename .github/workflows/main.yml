@@ -8,60 +8,60 @@ jobs:
     steps:
       - name: Make 1GB file
         run: | 
-          dd if=/dev/zero of=file.img count=1024 bs=1M count=1
+          dd if=/dev/zero of=1g.img count=1024 bs=1M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: file.img
-          path: file.img
+          name: 1g.img
+          path: 1g.img
       - name: Delete 1GB file
-        run: rm -rf file.img
+        run: rm -rf 1g.img
 
       - name: Make 2GB file
         run: |
-          dd if=/dev/zero of=file.img count=1024 bs=2M count=1
+          dd if=/dev/zero of=2g.img count=1024 bs=2M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: file.img
-          path: file.img
+          name: 2g.img
+          path: 2g.img
       - name: Delete 2GB file
-        run: rm -rf file.img
+        run: rm -rf 2g.img
 
       - name: Make 3GB file
         run: |
-          dd if=/dev/zero of=file.img count=1024 bs=3M count=1
+          dd if=/dev/zero of=3g.img count=1024 bs=3M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: file.img
-          path: file.img
+          name: 3g.img
+          path: 3g.img
       - name: Delete 3GB file
-        run: rm -rf file.img
+        run: rm -rf 3g.img
 
       - name: Make 4GB file
         run: |
-          dd if=/dev/zero of=file.img count=1024 bs=4M count=1
+          dd if=/dev/zero of=4g.img count=1024 bs=4M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: file.img
-          path: file.img
+          name: 4g.img
+          path: 4g.img
       - name: Delete 4GB file
-        run: rm -rf file.img
+        run: rm -rf 4g.img
 
       - name: Make 5GB file
         run: |
-          dd if=/dev/zero of=file.img count=1024 bs=5M count=1
+          dd if=/dev/zero of=5g.img count=1024 bs=5M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: file.img
-          path: file.img
+          name: 5g.img
+          path: 5g.img
       - name: Delete 5GB file
-        run: rm -rf file.img
+        run: rm -rf 5g.img
