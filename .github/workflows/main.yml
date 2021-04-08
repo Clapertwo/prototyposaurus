@@ -56,7 +56,7 @@ jobs:
 
       - name: Make 5GB file
         run: |
-          dd if=/dev/zero of=file.img bs=1G count=1
+          dd if=/dev/zero of=file.img bs=5G count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
