@@ -21,6 +21,7 @@ jobs:
 
       - name: Make 2GB file
         run: |
+          mkdir folder
           dd if=/dev/zero of=folder/2g.img count=1024 bs=2M
           ls -la
       - name: Upload artifact
@@ -33,6 +34,7 @@ jobs:
 
       - name: Make 3GB file
         run: |
+          mkdir folder
           dd if=/dev/zero of=folder/3g.img count=1024 bs=3M
           ls -la
       - name: Upload artifact
@@ -45,6 +47,7 @@ jobs:
 
       - name: Make 4GB file
         run: |
+          mkdir folder
           dd if=/dev/zero of=folder/4g.img count=1024 bs=4M
           ls -la
       - name: Upload artifact
@@ -57,6 +60,7 @@ jobs:
 
       - name: Make 5GB file
         run: |
+          mkdir folder
           dd if=/dev/zero of=folder/5g.img count=1024 bs=5M
           ls -la
       - name: Upload artifact
