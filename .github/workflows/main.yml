@@ -14,7 +14,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: folder
+          name: 1g
           path: folder
       - name: Delete 1GB file
         run: rm -rf *
@@ -26,7 +26,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: folder
+          name: 2g
           path: folder
       - name: Delete 2GB file
         run: rm -rf *
@@ -38,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: folder
+          name: 3g
           path: folder
       - name: Delete 3GB file
         run: rm -rf *
@@ -50,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: folder
+          name: 4g
           path: folder
       - name: Delete 4GB file
         run: rm -rf *
@@ -62,7 +62,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: folder
+          name: 5g
           path: folder
       - name: Delete 5GB file
         run: rm -rf *
