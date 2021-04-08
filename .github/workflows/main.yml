@@ -6,23 +6,52 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8.x'
-      # - name: Install and run YouTube-DL
-      #   run: |
-      #     curl -LJO https://github.com/ytdl-org/youtube-dl/releases/latest/download/youtube-dl
-      #     chmod +x ./youtube-dl
-      #     sudo ./youtube-dl --config-location youtube-dl.conf
-      - name: Download 10GB file
-        run: |
-          mkdir downloads
-          wget -q -O downloads/10GB.zip http://speedtest.tele2.net/10GB.zip
+      - name: Make 1GB file
+        run: dd if=/dev/zero of=file.img bs=1G count=1
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: downloads
-          path: downloads
+          name: 1G.img
+          path: 1G.img
+      - name: Delete 1GB file
+        run: rm -rf file.img
+
+      - name: Make 2GB file
+        run: dd if=/dev/zero of=file.img bs=2G count=1
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: 2G.img
+          path: 2G.img
+      - name: Delete 2GB file
+        run: rm -rf file.img
+
+      - name: Make 3GB file
+        run: dd if=/dev/zero of=file.img bs=3G count=1
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: 3G.img
+          path: 3G.img
+      - name: Delete 3GB file
+        run: rm -rf file.img
+
+      - name: Make 4GB file
+        run: dd if=/dev/zero of=file.img bs=4G count=1
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: 4G.img
+          path: 4G.img
+      - name: Delete 4GB file
+        run: rm -rf file.img
+
+      - name: Make 5GB file
+        run: dd if=/dev/zero of=file.img bs=1G count=1
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: 5G.img
+          path: 5G.img
+      - name: Delete 5GB file
+        run: rm -rf file.img
