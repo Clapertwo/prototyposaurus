@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Make 1GB file
-        run: dd if=/dev/zero of=file.img bs=1G count=1
+        run: | 
+          dd if=/dev/zero of=file.img bs=1G count=1
+          ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -17,7 +19,9 @@ jobs:
         run: rm -rf file.img
 
       - name: Make 2GB file
-        run: dd if=/dev/zero of=file.img bs=2G count=1
+        run: |
+          dd if=/dev/zero of=file.img bs=2G count=1
+          ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -27,7 +31,9 @@ jobs:
         run: rm -rf file.img
 
       - name: Make 3GB file
-        run: dd if=/dev/zero of=file.img bs=3G count=1
+        run: |
+          dd if=/dev/zero of=file.img bs=3G count=1
+          ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -37,7 +43,9 @@ jobs:
         run: rm -rf file.img
 
       - name: Make 4GB file
-        run: dd if=/dev/zero of=file.img bs=4G count=1
+        run: |
+          dd if=/dev/zero of=file.img bs=4G count=1
+          ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -47,7 +55,9 @@ jobs:
         run: rm -rf file.img
 
       - name: Make 5GB file
-        run: dd if=/dev/zero of=file.img bs=1G count=1
+        run: |
+          dd if=/dev/zero of=file.img bs=1G count=1
+          ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
