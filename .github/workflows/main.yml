@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Make 1GB file
         run: | 
-          dd if=/dev/zero of=file.img bs=1G count=1
+          dd if=/dev/zero of=file.img count=1024 bs=1M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -20,7 +20,7 @@ jobs:
 
       - name: Make 2GB file
         run: |
-          dd if=/dev/zero of=file.img bs=2G count=1
+          dd if=/dev/zero of=file.img count=1024 bs=2M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -32,7 +32,7 @@ jobs:
 
       - name: Make 3GB file
         run: |
-          dd if=/dev/zero of=file.img bs=3G count=1
+          dd if=/dev/zero of=file.img count=1024 bs=3M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -44,7 +44,7 @@ jobs:
 
       - name: Make 4GB file
         run: |
-          dd if=/dev/zero of=file.img bs=4G count=1
+          dd if=/dev/zero of=file.img count=1024 bs=4M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -56,7 +56,7 @@ jobs:
 
       - name: Make 5GB file
         run: |
-          dd if=/dev/zero of=file.img bs=5G count=1
+          dd if=/dev/zero of=file.img count=1024 bs=5M count=1
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
