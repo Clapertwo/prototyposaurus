@@ -8,65 +8,61 @@ jobs:
     steps:
       - name: Make 1GB file
         run: | 
-          dd if=/dev/zero of=1g.img count=1024 bs=1G
-          zip -0 1g.zip 1g.img
+          mkdir folder
+          dd if=/dev/zero of=folder/1g.img count=1024 bs=1M
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 1g.zip
-          path: 1g.zip
+          name: folder
+          path: folder
       - name: Delete 1GB file
         run: rm -rf *
 
       - name: Make 2GB file
         run: |
-          dd if=/dev/zero of=2g.img count=1024 bs=2G
-          zip -0 2g.zip 2g.img
+          dd if=/dev/zero of=folder/2g.img count=1024 bs=2M
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 2g.zip
-          path: 2g.zip
+          name: folder
+          path: folder
       - name: Delete 2GB file
         run: rm -rf *
 
       - name: Make 3GB file
         run: |
-          dd if=/dev/zero of=3g.img count=1024 bs=2G
-          zip -0 3g.zip 3g.img
+          dd if=/dev/zero of=folder/3g.img count=1024 bs=3M
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 3g.zip
-          path: 3g.zip
+          name: folder
+          path: folder
       - name: Delete 3GB file
         run: rm -rf *
 
       - name: Make 4GB file
         run: |
-          dd if=/dev/zero of=4g.img count=1024 bs=4M
-          zip -0 4g.zip 4g.img
+          dd if=/dev/zero of=folder/4g.img count=1024 bs=4M
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 4g.zip
-          path: 4g.zip
+          name: folder
+          path: folder
       - name: Delete 4GB file
         run: rm -rf *
 
       - name: Make 5GB file
         run: |
-          dd if=/dev/zero of=5g.img count=1024 bs=5M
-          zip -0 5g.zip 5g.img
+          dd if=/dev/zero of=folder/5g.img count=1024 bs=5M
           ls -la
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 5g.zip
-          path: 5g.zip
+          name: folder
+          path: folder
       - name: Delete 5GB file
         run: rm -rf *
