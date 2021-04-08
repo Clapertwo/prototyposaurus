@@ -13,8 +13,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 1G.img
-          path: 1G.img
+          name: file.img
+          path: file.img
       - name: Delete 1GB file
         run: rm -rf file.img
 
@@ -25,8 +25,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 2G.img
-          path: 2G.img
+          name: file.img
+          path: file.img
       - name: Delete 2GB file
         run: rm -rf file.img
 
@@ -37,8 +37,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 3G.img
-          path: 3G.img
+          name: file.img
+          path: file.img
       - name: Delete 3GB file
         run: rm -rf file.img
 
@@ -49,8 +49,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 4G.img
-          path: 4G.img
+          name: file.img
+          path: file.img
       - name: Delete 4GB file
         run: rm -rf file.img
 
@@ -61,7 +61,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 5G.img
-          path: 5G.img
+          name: file.img
+          path: file.img
       - name: Delete 5GB file
         run: rm -rf file.img
